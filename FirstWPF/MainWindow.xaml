@@ -7,9 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock Name="tbStatus" FontSize="50"/>
-        <Button Name="btnToggleRun" Width="100" Height="50" 
-                VerticalAlignment="Center" HorizontalAlignment="Center" 
-                Content="Run" FontSize="30" Click="btnToggleRun_Click"></Button>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition />
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Rectangle Grid.Row="0"  Fill="red" />
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0.6*"/>
+                <ColumnDefinition Width="0.2*"/>
+            </Grid.ColumnDefinitions>
+
+            <Rectangle Fill="LightGray" />
+            <Rectangle Grid.Column="1" Fill="Gray" />
+            <Rectangle Grid.Column="2" Fill="DarkGray" />
+        </Grid>
+        
+        <Rectangle Grid.Row="2"  Fill="green" />
     </Grid>
 </Window>
