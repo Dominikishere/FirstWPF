@@ -4,29 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FirstWPF"
+        xmlns:UserContorls="clr-namespace:FirstWPF.View.UserControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70" />
             <RowDefinition />
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="20" />
         </Grid.RowDefinitions>
 
-        <Rectangle Grid.Row="0"  Fill="red" />
-        
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*"/>
-                <ColumnDefinition Width="0.6*"/>
-                <ColumnDefinition Width="0.2*"/>
-            </Grid.ColumnDefinitions>
-
-            <Rectangle Fill="LightGray" />
-            <Rectangle Grid.Column="1" Fill="Gray" />
-            <Rectangle Grid.Column="2" Fill="DarkGray" />
-        </Grid>
-        
-        <Rectangle Grid.Row="2"  Fill="green" />
+        <UserContorls:MenuBar />
     </Grid>
 </Window>
